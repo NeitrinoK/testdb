@@ -1,0 +1,15 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+package object;
+option go_package = "./;object";
+
+message ObjectMetadata {
+    string tenant = 1;
+    string bucket = 2;
+    string object = 3;
+    string version_id = 4;
+    google.protobuf.Timestamp last_modified = 5;
+    string owner_display_name = 6;
+    string owner_id = 7;
+}
+
